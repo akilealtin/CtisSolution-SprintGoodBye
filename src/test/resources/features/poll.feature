@@ -35,11 +35,13 @@ Feature: As a user, I should be able to create a poll by clicking on Poll tab un
     And user accepts the popup
     Then the post should be deleted and the message should be displayed
 
+
   @CS10-334
   Scenario: User should be able to create a poll with title.
     When user clicks on the poll button
     And user clicks on send button
     Then the warning message should be displayed about title
+
 
   @CS10-335
   Scenario: User should be able to create a poll with answers.
@@ -50,6 +52,7 @@ Feature: As a user, I should be able to create a poll by clicking on Poll tab un
     And user clicks on send button
     Then the warning message of "question1" should be displayed about answers
 
+
   @CS10-336
   Scenario: User should be able to create a poll with question.
     When user clicks on the poll button
@@ -57,6 +60,7 @@ Feature: As a user, I should be able to create a poll by clicking on Poll tab un
     And user clicks on the first Answer box and adds answer as "Select A2"
     And user clicks on send button
     Then the warning message should be displayed about question
+
 
   @CS10-337
   Scenario: User should be able to create a poll with person.
