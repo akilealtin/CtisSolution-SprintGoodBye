@@ -9,10 +9,12 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class PollPage extends BasePage {
+
     public PollPage() {
 
         PageFactory.initElements(Driver.getDriver(), this);
     }
+
 
     @FindBy(xpath = "//span[@id='feed-add-post-form-tab-vote']/span")
     public WebElement pollButton;
