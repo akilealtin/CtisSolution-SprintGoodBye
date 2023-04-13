@@ -75,6 +75,7 @@ public class LoginStepDefinition {
     public void user_see_remember_me_link() {
         String expectedTitle = "Remember me on this computer";
         Assert.assertTrue(loginPage.rememberMe.getText().contains(expectedTitle));
+        //muhammed
     }
     @When("user click remember me link")
     public void user_click_remember_me_link() {
