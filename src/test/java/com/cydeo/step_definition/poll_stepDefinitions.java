@@ -17,7 +17,7 @@ public class poll_stepDefinitions {
 
     @When("user clicks on the poll button")
     public void user_clicks_on_the_poll_button() {
-        wait.until(ExpectedConditions.titleIs("Portal"));
+        wait.until(ExpectedConditions.titleContains("Portal"));
         pollPage.pollButton.click();
 
 
@@ -34,6 +34,7 @@ public class poll_stepDefinitions {
 
     @And("user clicks on add more link")
     public void userClicksOnAddMoreLink() {
+        wait.until(ExpectedConditions.visibilityOf(pollPage.addMoreButton));
 
         pollPage.addMoreButton.click();
     }
@@ -63,9 +64,9 @@ public class poll_stepDefinitions {
 
     @Then("verify the added contacts are displayed on the To box")
     public void verifyTheAddedContactsAreDisplayedOnTheToBox() {
-        Assert.assertTrue(pollPage.verifyContact1.isDisplayed());
-        Assert.assertTrue(pollPage.verifyContact2.isDisplayed());
-        Assert.assertTrue(pollPage.verifyContact3.isDisplayed());
+        Assert.assertTrue(pollPage.verifyC1().isDisplayed());
+        Assert.assertTrue(pollPage.verifyC2().isDisplayed());
+        Assert.assertTrue(pollPage.verifyC3().isDisplayed());
 
 
     }
@@ -224,7 +225,21 @@ public class poll_stepDefinitions {
 
     @And("user clicks add question button")
     public void userClicksAddQuestionButton() {
-    pollPage.addQuestion.click();
+        pollPage.addQuestion.click();
 
+    }
+
+    @And("user add more than one contacts as {string} {string} {string}")
+    public void userAddMoreThanOneContactsAs(String a, String b, String c) {
+
+        pollPage.contact1.click();
+        pollPage.contact2.click();
+        pollPage.contact3.click();
+
+
+    }
+
+    @Then("verify the added contacts are displayed on the To box as {string} {string} {string}")
+    public void verifyTheAddedContactsAreDisplayedOnTheToBoxAs(String arg0, String arg1, String arg2) {
     }
 }

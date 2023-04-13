@@ -4,13 +4,17 @@ import com.cydeo.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
 public class PollPage extends BasePage {
+    public PollPage() {
 
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
 
-    @FindBy(xpath = "//span[.='Poll']")
+    @FindBy(xpath = "//span[@id='feed-add-post-form-tab-vote']/span")
     public WebElement pollButton;
 
     @FindBy(xpath = "//iframe[@class='bx-editor-iframe']")
@@ -21,36 +25,76 @@ public class PollPage extends BasePage {
     public WebElement textBox;
 
     @FindBy(css = "a#bx-destination-tag")
+
     public WebElement addMoreButton;
 
     @FindBy(xpath = "//a[.='Employees and departments']")
     public WebElement employeesDepartmentsLink;
 
-    @FindBy(xpath = "//*[@id=\"bx-lm-category-relation-129\"]/a[123]/div[1]/div[1]")
+    @FindBy(xpath = "//*[@id=\"bx-lm-category-relation-129\"]/a[6]/div[1]/div[1]")
     public WebElement contact1;
+    public String  c1(){
+        String c1 = contact1.getText();
+
+    return c1;
+    }
 
     @FindBy(xpath = "//*[@id=\"bx-lm-category-relation-129\"]/a[1]/div[1]/div[1]")
     public WebElement contact2;
 
+    public String  c2(){
+        String c1 = contact2.getText();
+
+        return c1;
+    }
+
+
     @FindBy(xpath = "//*[@id=\"bx-lm-category-relation-129\"]/a[3]/div[1]/div[1]")
     public WebElement contact3;
 
+    public String  c3(){
+        String c1 = contact3.getText();
+
+        return c1;
+    }
     @FindBy(xpath = "//span[@class='popup-window-close-icon']")
     public WebElement close;
 
-    @FindBy(xpath = "//div[@id='feed-add-post-destination-container']/span/span[2]/span[.='marketing17@cybertekschool.com']")
+    @FindBy(xpath = "//div[@id='feed-add-post-destination-container']/span/span[2]/span[.='hr77@cybertekschool.com']")
     public WebElement verifyContact1;
+
+
+    public WebElement verifyC1(){
+        String xPath= "//div[@id='feed-add-post-destination-container']/span/span[2]/span[.='"+c1()+"']";
+       return Driver.getDriver().findElement(By.xpath(xPath));
+    }
 
     @FindBy(xpath = "//div[@id='feed-add-post-destination-container']/span/span[3]/span[.='helpdesk1@cybertekschool.com']")
     public WebElement verifyContact2;
+
+
+    public WebElement verifyC2(){
+        String xPath= "//div[@id='feed-add-post-destination-container']/span/span[3]/span[.='"+c2()+"']";
+       return Driver.getDriver().findElement(By.xpath(xPath));
+    }
+
+
     @FindBy(xpath = "//div[@id='feed-add-post-destination-container']/span/span[4]/span[.='hr76@cybertekschool.com']")
     public WebElement verifyContact3;
 
+
+    public WebElement verifyC3(){
+        String xPath= "//div[@id='feed-add-post-destination-container']/span/span[4]/span[.='"+c3()+"']";
+       return Driver.getDriver().findElement(By.xpath(xPath));
+    }
 
     @FindBy(xpath = "//input[@placeholder='Question ']")
     public WebElement questionBox;
 
 
+
+    @FindBy(xpath = "//*[@id=\"feed-add-post-destination-item\"]")
+    public WebElement toBox;
     @FindBy(xpath = "//input[@placeholder='Answer  1']")
     public WebElement answerBox1;
     @FindBy(xpath = "//input[@placeholder='Answer  2']")
@@ -117,7 +161,6 @@ public class PollPage extends BasePage {
 
     @FindBy(xpath = "//span[@class='feed-add-post-del-but']")
     public WebElement deleteAllEmployees;
-
 
 
     public WebElement verifyAnswerWarningMessage(String question) {
