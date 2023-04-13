@@ -228,18 +228,4 @@ public class poll_stepDefinitions {
         pollPage.addQuestion.click();
 
     }
-
-    @And("user add more than one contacts as {string} {string} {string}")
-    public void userAddMoreThanOneContactsAs(String a, String b, String c) {
-
-        pollPage.contact1.click();
-        pollPage.contact2.click();
-        pollPage.contact3.click();
-
-
-    }
-
-    @Then("verify the added contacts are displayed on the To box as {string} {string} {string}")
-    public void verifyTheAddedContactsAreDisplayedOnTheToBoxAs(String arg0, String arg1, String arg2) {
-    }
 }
