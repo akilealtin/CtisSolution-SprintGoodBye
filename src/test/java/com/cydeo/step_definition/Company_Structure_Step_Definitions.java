@@ -189,15 +189,7 @@ public class Company_Structure_Step_Definitions {
     @When("user drag and drop one department to under another one")
     public void user_drag_and_drop_one_department_to_under_another_one() {
         Actions actions = new Actions(Driver.getDriver());
-  /*      actions.moveToElement(company.childDepartment).perform();
-        actions.clickAndHold(company.childDepartment).perform();
-        System.out.println("childfordragdrop is holding");
-        actions.moveToElement(company.parentDepartment).perform();
-        System.out.println("moving to parentfordraganddrop");
-        actions.release(company.childDepartment).perform();
-        System.out.println("childfordragdrop is releasing");
-
-    */  BrowserUtils.sleep(1);
+        BrowserUtils.sleep(1);
         actions.dragAndDrop(company.childDepartment,company.parentDepartment).build().perform();
     }
 
