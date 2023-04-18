@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/cydeo/step_definition",
         dryRun = false,
-        tags ="@CS10-359"
+        tags =""
         //publish = true
 )
 
