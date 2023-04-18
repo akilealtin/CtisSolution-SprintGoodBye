@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class PollPage extends BasePage {
+public class PollPage {
 
 
     @FindBy(xpath = "//span[.='Poll']")

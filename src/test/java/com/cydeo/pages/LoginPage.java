@@ -55,7 +55,11 @@ public class LoginPage {
         passwordBox.sendKeys("UserUser");
         loginButton.click();
     }
-
+    public void Login2(){
+        usernameBox.sendKeys("hr60@cybertekschool.com");
+        passwordBox.sendKeys("UserUser");
+        loginButton.click();
+    }
 
 
 

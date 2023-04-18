@@ -3,7 +3,7 @@ Feature: As a user, I should be able to add link, insert video, mention, quote, 
 
   Background:Login Page
     Given User is on the login Page
-    Given User is on the Activity Stream page
+    Given user should be login
 
     Scenario: 1. User should be able to add mentions
       Given user click massage space
