@@ -1,10 +1,14 @@
+
+
 Feature: As a user I should be able to interact with employees on the posts
 
   Background:
+    #@CS10-358
     Given User is on the login page
     Given user should be login2
 
 
+  @CS10-359
   Scenario: User should be able to make a comment like or unfollow other employees posts
 
     And User should be able to click like button on the any employee
