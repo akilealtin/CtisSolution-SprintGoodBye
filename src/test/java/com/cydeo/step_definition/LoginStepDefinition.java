@@ -119,6 +119,10 @@ public class LoginStepDefinition {
         loginPage.Login();
     }
 
+    @Given("user should be login2")
+    public void userShouldBeLogin2() {
+        loginPage.Login2();
+    }
 
 
 }

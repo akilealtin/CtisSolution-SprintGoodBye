@@ -16,7 +16,7 @@ public class AfterMassageStepDefinition {
         AfterMassage afterMassage = new AfterMassage();
 
 
-    @Given("User is on the login Page")
+ /*  @Given("User is on the login Page")
     public void user_is_on_the_login_page() {
         Driver.getDriver().get(ConfigurationReader.getProperty("environment.url"));
     }
@@ -25,7 +25,7 @@ public class AfterMassageStepDefinition {
     afterMassage.usernameBox.sendKeys("hr1@cybertekschool.com");
     afterMassage.passwordBox.sendKeys("UserUser");
     afterMassage.loginButton.click();
-    }
+    }*/
 
 
     @Given("user click massage space")
